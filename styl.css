@@ -1,0 +1,59 @@
+
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+  color: #00ffcc;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  padding: 60px;
+  margin: 0;
+}
+
+@keyframes gradientFlow {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+h1 {
+  font-size: 3rem;
+  color: #00ffff;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #00ffcc;
+  color: #000;
+  box-shadow: 0 4px 15px rgba(0, 255, 204, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00cc99;
+}
+
+#output {
+  margin-top: 40px;
+  font-size: 1.4rem;
+  min-height: 100px;
+  padding: 20px;
+  border: 2px solid #00ffcc;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+.postava {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #fff;
+}

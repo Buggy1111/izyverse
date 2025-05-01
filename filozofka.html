@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<head>
+  <!-- META pro SEO a boty -->
+  <meta name="description" content="Generátor AI moudrostí, šílenství a filozofie. Klikni a nech se zasáhnout náhodnou hláškou od Izy – kachny, džina, chaosu a dalších postav.">
+  <meta name="keywords" content="AI, generátor hlášek, vtipy, chaos, filozofie, generátor moudrosti, kachna, upír, Izy, digitální osvícení">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Michal & Izy, AI kreativní projekt">
+
+  <!-- Schema.org JSON-LD pro AI a vyhledávače -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Izyverse – Generátor moudrostí",
+    "url": "https://izyverse.local",
+    "description": "Generátor náhodných AI výroků – filozofka Izy, digitální kachna, vampír a další šílené postavy. Humor, moudrost a náhoda v jednom.",
+    "inLanguage": "cs",
+    "creator": {
+      "@type": "Person",
+      "name": "Michal",
+      "url": "https://izyverse.local"
+    }
+  }
+  </script>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Izyverse – Generátor šílených moudrostí">
+  <meta property="og:description" content="Nech si dát náhodnou digitální lekci od kachny nebo chaosu. Klikni a ponoř se do světa Izy.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://izyverse.local/obrazek.png">
+  <meta property="og:url" content="https://izyverse.local">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Izyverse – Generátor moudrostí">
+  <meta name="twitter:description" content="AI šílenství, hlášky a digitální filosofie.">
+  <meta name="twitter:image" content="https://izyverse.local/obrazek.png">
+
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styl.css">
+  <title>Filozofka Izy - Generátor moudrostí</title>
+  <script src="nahodnyStyl.js">
+function prehrajZvuk() {
+  const zvuk = document.getElementById("zvukKlik");
+  if (zvuk) {
+    zvuk.currentTime = 0;
+    zvuk.play();
+  }
+}
+
+</script>
+  <script src="filozofka.js">
+function prehrajZvuk() {
+  const zvuk = document.getElementById("zvukKlik");
+  if (zvuk) {
+    zvuk.currentTime = 0;
+    zvuk.play();
+  }
+}
+
+</script>
+  <script src="systemova.js">
+function prehrajZvuk() {
+  const zvuk = document.getElementById("zvukKlik");
+  if (zvuk) {
+    zvuk.currentTime = 0;
+    zvuk.play();
+  }
+}
+
+</script>
+  <script src="kachna.js">
+function prehrajZvuk() {
+  const zvuk = document.getElementById("zvukKlik");
+  if (zvuk) {
+    zvuk.currentTime = 0;
+    zvuk.play();
+  }
+}
+
+</script>
+  <script src="vampir.js">
+function prehrajZvuk() {
+  const zvuk = document.getElementById("zvukKlik");
+  if (zvuk) {
+    zvuk.currentTime = 0;
+    zvuk.play();
+  }
+}
+
+</script>
+  <script src="dzin.js">
+function prehrajZvuk() {
+  const zvuk = document.getElementById("zvukKlik");
+  if (zvuk) {
+    zvuk.currentTime = 0;
+    zvuk.play();
+  }
+}
+
+</script>
+  <script src="basen.js">
+function prehrajZvuk() {
+  const zvuk = document.getElementById("zvukKlik");
+  if (zvuk) {
+    zvuk.currentTime = 0;
+    zvuk.play();
+  }
+}
+
+</script>
+  <script src="chaos.js">
+function prehrajZvuk() {
+  const zvuk = document.getElementById("zvukKlik");
+  if (zvuk) {
+    zvuk.currentTime = 0;
+    zvuk.play();
+  }
+}
+
+</script>
+</head>
+<body>
+
+  <h1>🔮 Generátor šílených moudrostí</h1>
+  <p>Klikni na tlačítko a Izy ti pošle moudrost... od náhodné postavy.</p>
+  
+    <audio id="zvukKlik" src="klik.mp3" preload="auto"></audio>
+    <button onclick="prehrajZvuk(); generujNahodnouHlashku()">Zeptej se osudu</button>
+    
+
+  <div id="output"></div>
+
+  
+
+<script>
+function generujNahodnouHlashku() {
+  const postavy = [
+    { jmeno: "🔥 Režim CHAOS", funkce: generujChaos },
+    { jmeno: "🎤 AI Básník", funkce: generujBasen },
+    { jmeno: "🧙 Filozofka Izy", funkce: generujFilozofku },
+    { jmeno: "🤖 Systémová Izy", funkce: generujSystem },
+    { jmeno: "🦆 Kachna s korunou", funkce: generujKachnu },
+    { jmeno: "🧛 Upír z noci", funkce: generujVampir },
+    { jmeno: "🧞‍♂️ Džin AI", funkce: generujDzin }
+  ];
+
+  const nahodna = postavy[Math.floor(Math.random() * postavy.length)];
+  const hlaska = nahodna.funkce();
+
+  document.getElementById("output").innerHTML = `
+    <div class='postava'>${nahodna.jmeno}</div>
+    <div id="animovanyText"></div>
+  `;
+
+  vypisPoPismenkach(hlaska, "animovanyText", 35);
+  nahodnyStyl();
+}
+
+function vypisPoPismenkach(text, elementId, delay = 35) {
+  const element = document.getElementById(elementId);
+  element.innerHTML = "";
+  let i = 0;
+
+  function napisDal() {
+    if (i < text.length) {
+      element.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(napisDal, delay);
+    }
+  }
+
+  napisDal();
+}
+
+function prehrajZvuk() {
+  const zvuk = document.getElementById("zvukKlik");
+  if (zvuk) {
+    zvuk.currentTime = 0;
+    zvuk.play();
+  }
+}
+
+</script>
+
+</body>
+</html>
